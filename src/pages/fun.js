@@ -13,9 +13,9 @@ const fun = () => {
             </Head>
             <TransitionEffect />
             <main className="w-full pb-16 mb-16 flex flex-col items-center justify-center overflow-hidden">
-                <Layout className="pt-16 ">
+                <Layout underConstruction={true} className="pt-16 ">
                     <h1 className="text-light">Hello world</h1>
-                    <DndCharacterGenerator />
+                    {/* <DndCharacterGenerator /> */}
                 </Layout>
             </main>
         </>
