@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import Head from "next/head";
 import Layout from "@/components/layout";
-import profilePic from "../../public/images/profile/Brian-editedbg.png";
+import profilePic from "../../public/images/profile/portfolio-pic.webp";
 import { useRef } from "react";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
