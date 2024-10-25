@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import Image from "next/image";
-import profilePic from "../../public/images/profile/profile-pic-upscaled-removebg.png";
+import profilePic from "../../public/images/profile/profile-pic-upscaled-removebg.webp";
 import AnimatedText from "../components/AnimatedText.js";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
