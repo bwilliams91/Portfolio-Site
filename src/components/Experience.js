@@ -29,7 +29,9 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
           {time} | {address}
         </span>
-        <p className="font-medium w-full sm:text-sm">{work}</p>
+        <ul className="list-disc list-inside">
+            {Array.isArray(work) && work.map((item, index) => <li key={index}>{item}</li>)}
+        </ul>
       </motion.div>
     </li>
   );
@@ -41,6 +43,25 @@ const Experience = () => {
     target: ref,
     offset: ["start end", "center start"],
   });
+
+  const workRikerWeb = [
+    'Specialize in full-stack web development using HTML/CSS, JavaScript, and Tailwind CSS',
+    'Follow design mockups and wireframes for precise implementation',
+    'Collaborate closely with backend developers for seamless integration',
+    'Leverage Tailwind CSS utilities to create custom layouts and styles',
+    'Delivered projects for various industries, increasing online leads by 25% for an HVAC company',
+    'Boosted user engagement by 30% and reduced load times by 15% for a food delivery service',
+    'Contributed to a 20% increase in overall project delivery efficiency',
+  ];
+
+  const workCodingForHermitCrabs = [
+    'Developed and maintained websites for small businesses using HTML, CSS, and JavaScript',
+    'Optimized websites for mobile responsiveness and cross-browser compatibility',
+    'Implemented SEO best practices to improve search engine rankings',
+    'Collaborated with clients to understand their needs and deliver custom solutions',
+    'Helped write articles introducing underpriveledged teens to careers in tech',
+    'Provided ongoing support and maintenance to ensure optimal performance',
+  ];
   return (
     <div className="my-64">
       <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
@@ -54,13 +75,21 @@ const Experience = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2 ">
           <Details
-            position="Web Developer"
+            position="Frontend Developer"
             company="RikerWeb"
-            companyLink="/"
-            time="2023-Present"
+            companyLink= '/'
+            time="2024-Present"
             address="Colorado Springs, CO"
-            work="At RikerWeb, I build websites with HTML/CSS, JS and Tailwind CSS. I follow design mockups and wireframes, and work with backend developers. I use Tailwind CSS utilities and components to create custom layouts and styles. I have built websites for a HVAC company, a food delivery service and more."
+            work={workRikerWeb}
           />
+          <Details
+            position="Web Developer"
+            company="Coding For Hermit Crabs"
+            companyLink="/"
+            time="2023"
+            address="Atlanta, GA"
+            work={workCodingForHermitCrabs}
+            />
         </ul>
       </div>
     </div>
