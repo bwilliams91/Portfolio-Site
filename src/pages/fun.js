@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import TransitionEffect from "@/components/TransitionEffect";
 import Layout from "@/components/layout";
-import DndCharacterGenerator from "@/components/D&DCharacterGenerator"
+// import DndCharacterGenerator from "@/components/D&DCharacterGenerator"
 
 const fun = () => {
     return (
