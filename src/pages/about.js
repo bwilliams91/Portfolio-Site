@@ -54,8 +54,8 @@ const about = () => {
               <p className="font-medium">
                 Hello! My name is Brian, and I am a full-stack developer with a
                 passion for creating beautiful, functional, and user-centered
-                digital experiences. With 3+ years of professional experience,
-                I build and maintain education technology platforms for the
+                digital experiences. With 6+ years of experience, I build and
+                maintain education technology platforms for the
                 Georgia Department of Education, serving 1.75M+ K-12 students
                 and 121K+ educators across the state.
               </p>
@@ -89,16 +89,16 @@ const about = () => {
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={8} />+
+                  <AnimatedNumbers value={121} />K+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  Satisfied Clients
+                  Educators Supported
                 </h2>
               </div>
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={10} />+
+                  <AnimatedNumbers value={30} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Projects Completed
@@ -107,7 +107,7 @@ const about = () => {
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={3} />+
+                  <AnimatedNumbers value={6} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Years of Experience
