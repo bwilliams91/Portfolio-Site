@@ -1,9 +1,9 @@
 import React from "react";
-import Head from "next/head";
 import Layout from "@/components/layout";
 import AnimatedText from "@/components/AnimatedText";
 import { FeaturedProject, Project } from "@/components/ProjectCards";
 import TransitionEffect from "@/components/TransitionEffect";
+import Seo from "@/components/Seo";
 import GolfFix from "../../public/images/projects/golf-fix.webp";
 import FrozenMiasma from "../../public/images/projects/frozen-miasma.webp";
 import ChillyWillyAir from "../../public/images/projects/chilly-willy-air.webp";
@@ -13,13 +13,11 @@ import Omnifood from "../../public/images/projects/Brians_Stuff-Omnifood_Project
 const projects = () => {
   return (
     <>
-      <Head>
-        <title>Brian Williams | Projects Page</title>
-        <meta
-          name="description"
-          content="Selected projects by Brian Williams: Golf Fix, a curated golf brand directory, a Three.js first-person shooter, a client site for an Atlanta HVAC company, and a local codebase dependency visualizer."
-        />
-      </Head>
+      <Seo
+        title="Projects | Brian Williams, Full-Stack Developer"
+        description="Selected projects by Brian Williams: the Golf Fix brand directory, a Three.js shooter, a client HVAC site and a codebase dependency visualizer."
+        path="/projects"
+      />
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">

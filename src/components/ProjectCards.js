@@ -33,9 +33,10 @@ const Media = ({ link, className = "", children }) =>
 const ProjectImage = ({ img, title, link, className = "", sizes, preload = false }) => (
   <FramerImage
     src={img}
-    alt={title}
+    alt={`Screenshot of ${title}`}
     sizes={sizes}
     preload={preload}
+    fetchPriority={preload ? "high" : undefined}
     className={`w-full h-auto rounded-xl ${className}`}
     whileHover={link ? { scale: 1.05 } : undefined}
     transition={{ duration: 0.2 }}

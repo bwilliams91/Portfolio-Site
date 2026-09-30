@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Layout from "../components/layout";
 import Image from "next/image";
 import profilePic from "../../public/images/profile/profile-pic-upscaled-removebg.webp";
@@ -7,22 +6,29 @@ import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
 import TransitionEffect from "@/components/TransitionEffect";
+import Seo from "@/components/Seo";
+import { personJsonLd, websiteJsonLd } from "@/lib/site";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Welcome to my Portfolio</title>
-        <meta name="description" content="Brian Williams is a full-stack developer building immersive, interactive web experiences and education technology." />
-      </Head>
+      <Seo
+        title="Brian Williams | Full-Stack Developer Portfolio"
+        description="Brian Williams is a full-stack developer building interactive web experiences and education technology. Explore projects in Vue, React, Next.js and Three.js."
+        path="/"
+        jsonLd={[personJsonLd, websiteJsonLd]}
+      />
       <TransitionEffect />
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0 md:p-16 sm:pt-8">
           <div className="flex items-center justify-between w-full lg:flex-col">
             <div className="w-1/2 md:w-full">
-              <Image src={profilePic} alt="Brian" className="w-full h-auto lg:hidden md:inline-block md:w-full " preload sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw" />
+              <Image src={profilePic} alt="Illustrated portrait of Brian Williams" className="w-full h-auto lg:hidden md:inline-block md:w-full " preload fetchPriority="high" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw" />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
+              <p className="self-start text-lg font-semibold uppercase tracking-widest text-primary dark:text-primaryDark lg:self-center md:text-base sm:text-sm">
+                Brian Williams · Full-Stack Developer
+              </p>
               <AnimatedText
                 text="Sculpting interactive experiences that push the web beyond its limits."
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl sm:pt-2"

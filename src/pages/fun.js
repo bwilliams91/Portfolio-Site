@@ -1,8 +1,8 @@
 import React from "react";
-import Head from "next/head";
 import TransitionEffect from "@/components/TransitionEffect";
 import Layout from "@/components/layout";
 import AnimatedText from "@/components/AnimatedText";
+import Seo from "@/components/Seo";
 import { FeaturedProject, Project } from "@/components/ProjectCards";
 import AsciiWorld from "../../public/images/fun/ascii-world.webp";
 import GalaxyGenerator from "../../public/images/fun/galaxy-generator.webp";
@@ -99,13 +99,11 @@ const experiments = [
 const fun = () => {
   return (
     <>
-      <Head>
-        <title>Brian Williams | Fun Things</title>
-        <meta
-          name="description"
-          content="Little worlds and experiments: a 3D world rendered entirely as text, Three.js scenes, shaders and small browser games built for the joy of it."
-        />
-      </Head>
+      <Seo
+        title="Experiments & Little Worlds | Brian Williams"
+        description="Little worlds and experiments: a 3D world rendered entirely as text, Three.js scenes, shaders and small browser games built for the joy of it."
+        path="/fun"
+      />
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">

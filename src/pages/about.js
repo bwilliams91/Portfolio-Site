@@ -2,7 +2,6 @@ import AnimatedText from "@/components/AnimatedText";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Image from "next/image";
 import React, { useEffect } from "react";
-import Head from "next/head";
 import Layout from "@/components/layout";
 import profilePic from "../../public/images/profile/portfolio-pic.webp";
 import { useRef } from "react";
@@ -10,6 +9,7 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
+import Seo from "@/components/Seo";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -38,10 +38,11 @@ const AnimatedNumbers = ({ value }) => {
 const about = () => {
   return (
     <>
-      <Head>
-        <title>Brian Williams | About Page</title>
-        <meta name="description" content="About Brian Williams, a full-stack developer building beautiful, functional, user-centered digital experiences for government and education." />
-      </Head>
+      <Seo
+        title="About Brian Williams | Full-Stack Developer"
+        description="About Brian Williams, a full-stack developer building beautiful, functional, user-centered digital experiences for government and education."
+        path="/about"
+      />
       <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
@@ -80,9 +81,10 @@ const about = () => {
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
               <Image
                 src={profilePic}
-                alt="Brian"
+                alt="Brian Williams"
                 className="w-full h-auto rounded-2xl"
                 preload
+                fetchPriority="high"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
               />
             </div>
@@ -91,27 +93,27 @@ const about = () => {
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
                   <AnimatedNumbers value={121} />K+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
+                <p className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Educators Supported
-                </h2>
+                </p>
               </div>
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
                   <AnimatedNumbers value={30} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
+                <p className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Projects Completed
-                </h2>
+                </p>
               </div>
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
                   <AnimatedNumbers value={6} />+
                 </span>
-                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
+                <p className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Years of Experience
-                </h2>
+                </p>
               </div>
             </div>
           </div>

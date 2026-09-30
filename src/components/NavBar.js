@@ -61,7 +61,7 @@ const NavBar = () => {
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 xl:px-16 lg:px-16 md:px-12 sm:px-8">
 
-      <button className="flex-col justify-center items-center hidden lg:flex" onClick={handleClick}>
+      <button className="flex-col justify-center items-center hidden lg:flex" onClick={handleClick} aria-label="Toggle menu" aria-expanded={isOpen}>
         <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}></span>
         <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? "opacity-0" : "opacity-100"}`}></span>
         <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"}`}></span>
@@ -81,7 +81,9 @@ const NavBar = () => {
       <nav className="flex items-center justify-center flex-wrap gap-6">
         <motion.a
           href="https://github.com/bwilliams91"
-          target={"_blank"}
+          aria-label="Brian Williams on GitHub"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           className="w-6"
@@ -90,7 +92,9 @@ const NavBar = () => {
         </motion.a>
         <motion.a
           href="https://www.linkedin.com/in/brianwebdev/"
-          target={"_blank"}
+          aria-label="Brian Williams on LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
           className="w-6"
@@ -98,7 +102,7 @@ const NavBar = () => {
           <LinkedInIcon />
         </motion.a>
 
-      <button onClick={() => setMode(mode === "light" ? "dark" : "light")} 
+      <button onClick={() => setMode(mode === "light" ? "dark" : "light")} aria-label="Toggle dark mode" 
       className={`flex items-center justify-center rounded-full p-1
       ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
       `}
@@ -133,7 +137,9 @@ const NavBar = () => {
           <nav className="flex items-center justify-center flex-wrap mt-2">
             <motion.a
               href="https://github.com/bwilliams91"
-              target={"_blank"}
+          aria-label="Brian Williams on GitHub"
+              target="_blank"
+          rel="noopener noreferrer"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               className="w-6 mr-3 bg-light rounded-full dark:bg-dark"
@@ -142,7 +148,9 @@ const NavBar = () => {
             </motion.a>
             <motion.a
               href="https://www.linkedin.com/in/brianwebdev/"
-              target={"_blank"}
+          aria-label="Brian Williams on LinkedIn"
+              target="_blank"
+          rel="noopener noreferrer"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               className="w-6 mx-3"
@@ -150,7 +158,7 @@ const NavBar = () => {
               <LinkedInIcon />
             </motion.a>
 
-            <button onClick={() => setMode(mode === "light" ? "dark" : "light")} 
+            <button onClick={() => setMode(mode === "light" ? "dark" : "light")} aria-label="Toggle dark mode" 
             className={`ml-3 flex items-center justify-center rounded-full p-1
             ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
             `}

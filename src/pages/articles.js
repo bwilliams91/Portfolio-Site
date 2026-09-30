@@ -1,13 +1,13 @@
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/layout";
 import React, { useRef } from "react";
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import article1 from "../../public/images/articles/pagination component in reactjs.jpg";
 import article2 from "../../public/images/articles/form validation in reactjs using custom react hook.png";
 import { motion, useMotionValue } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
+import Seo from "@/components/Seo";
 
 const FramerImage = motion.create(Image);
 
@@ -96,10 +96,12 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
 const articles = () => {
   return (
     <>
-      <Head>
-        <title>Brian Williams | Articles Page</title>
-        <meta name="description" content="Articles by Brian Williams on React and modern front-end development." />
-      </Head>
+      <Seo
+        title="Articles | Brian Williams"
+        description="Articles by Brian Williams on React and modern front-end development. Coming soon."
+        path="/articles"
+        noindex
+      />
       <TransitionEffect />
       <main className="w-full pb-16 mb-16 flex flex-col items-center justify-center overflow-hidden">
       <Layout underConstruction={true} className="pt-16 ">
