@@ -4,6 +4,7 @@ import Layout from "@/components/layout";
 import AnimatedText from "@/components/AnimatedText";
 import { FeaturedProject, Project } from "@/components/ProjectCards";
 import TransitionEffect from "@/components/TransitionEffect";
+import GolfFix from "../../public/images/projects/golf-fix.webp";
 import FrozenMiasma from "../../public/images/projects/frozen-miasma.webp";
 import ChillyWillyAir from "../../public/images/projects/chilly-willy-air.webp";
 import Constellation from "../../public/images/projects/constellation.webp";
@@ -16,7 +17,7 @@ const projects = () => {
         <title>Brian Williams | Projects Page</title>
         <meta
           name="description"
-          content="Selected projects by Brian Williams: a Three.js first-person shooter, a client site for an Atlanta HVAC company, and a local codebase dependency visualizer."
+          content="Selected projects by Brian Williams: Golf Fix, a curated golf brand directory, a Three.js first-person shooter, a client site for an Atlanta HVAC company, and a local codebase dependency visualizer."
         />
       </Head>
       <TransitionEffect />
@@ -27,13 +28,23 @@ const projects = () => {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
+                title="Golf Fix"
+                img={GolfFix}
+                summary="A curated directory of golf apparel, equipment and lifestyle brands beyond the big-box names. Visitors search and filter by category and vibe, then land straight on the brand's own site, and brands can submit themselves for listing."
+                link="https://www.golf-fix.com"
+                type="Featured Project"
+                tags={["Vue 3", "TypeScript", "Vite", "Vercel"]}
+                preload
+              />
+            </div>
+            <div className="col-span-12">
+              <FeaturedProject
                 title="Frozen Miasma"
                 img={FrozenMiasma}
                 summary="A browser-based, Doom-style first-person shooter reskinned as 1920s Antarctic cosmic horror. Built with Three.js around a cell-grid level system with sector lighting, detailed props and 8-angle sprite enemies."
                 link="https://frozen-miasma.vercel.app"
                 type="Featured Project"
                 tags={["Three.js", "JavaScript", "Game Development", "In Development"]}
-                preload
               />
             </div>
             <div className="col-span-12">
