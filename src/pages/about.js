@@ -40,7 +40,7 @@ const about = () => {
     <>
       <Head>
         <title>Brian Williams | About Page</title>
-        <meta name="description" content="About Brian Williams, a web developer and UI/UX designer building beautiful, functional, user-centered digital experiences." />
+        <meta name="description" content="About Brian Williams, a full-stack developer building beautiful, functional, user-centered digital experiences for government and education." />
       </Head>
       <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
@@ -52,23 +52,27 @@ const about = () => {
                 About Me
               </h2>
               <p className="font-medium">
-                Hello! My name is Brian, I am a web developer and UI/UX designer
-                with a passion for creating beautiful, functional, and
-                user-centered digital experiences. With 4 years of experience in
-                the field. I am always looking for new and innovative ways to
-                bring my clients visions to life.
+                Hello! My name is Brian, and I am a full-stack developer with a
+                passion for creating beautiful, functional, and user-centered
+                digital experiences. With 3+ years of professional experience,
+                I build and maintain education technology platforms for the
+                Georgia Department of Education, serving 1.75M+ K-12 students
+                and 121K+ educators across the state.
               </p>
               <p className="my-4 font-medium">
                 I believe that design is about more than just making things look
                 pretty, it is about solving problems and creating intuitive,
-                enjoyable experiences for users.
+                enjoyable experiences for users. I own projects end-to-end, from
+                UI/UX implementation to backend architecture and database
+                optimization.
               </p>
               <p className="font-medium">
-                Whether I am working on a website, mobile app, or other digital
-                product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                Right now I am also leading AI development initiatives across
+                my organization, building Model Context Protocol (MCP)
+                infrastructure and AI-assisted development workflows. Whether I
+                am working on a website, web app, or other digital product, I
+                bring a commitment to design excellence, accessibility, and
+                user-centered thinking to every project.
               </p>
             </div>
 
@@ -103,7 +107,7 @@ const about = () => {
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={4} />+
+                  <AnimatedNumbers value={3} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
                   Years of Experience

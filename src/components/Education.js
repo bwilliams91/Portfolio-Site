@@ -43,9 +43,15 @@ const Education = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            type="Associate degree in Political Science"
-            time="2015-2018"
-            place="Pike's Peak State College"
+            type="Full-Stack Web Development Apprenticeship"
+            time="2023"
+            place="Coding For Hermit Crabs Intensive Bootcamp"
+            info=""
+          />
+          <Details
+            type="Associate Degree in Political Science"
+            time="2015-2017"
+            place="Pikes Peak State College"
             info=""
           />
         </ul>

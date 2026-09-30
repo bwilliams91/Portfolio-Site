@@ -18,16 +18,21 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
       >
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
           {position}&nbsp;
-          <a
-            href={companyLink}
-            target="_blank"
-            className="text-primary capitalize"
-          >
-            @{company}
-          </a>
+          {companyLink ? (
+            <a
+              href={companyLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary capitalize"
+            >
+              @{company}
+            </a>
+          ) : (
+            <span className="text-primary capitalize">@{company}</span>
+          )}
         </h3>
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
-          {time} | {address}
+          {address ? `${time} | ${address}` : time}
         </span>
         <ul className="list-disc list-inside">
             {Array.isArray(work) && work.map((item, index) => <li key={index}>{item}</li>)}
@@ -44,24 +49,27 @@ const Experience = () => {
     offset: ["start end", "center start"],
   });
 
+  const workGaDoe = [
+    "Hired as a UI/UX Developer and grew into full-stack ownership of mission-critical platforms serving millions of K-12 students and educators across Georgia",
+    "Architected and maintained an H5P-based PHP platform serving thousands of concurrent users across Georgia Virtual School (GAVS), covering both frontend and backend",
+    "Sole design/development resource for 1+ year on GALEADS, the leadership evaluation and development system used by principals, assistant principals, and superintendents across 2,316 schools",
+    "Optimized SQL queries and relational database architecture to support statewide deployments serving 1.75M+ students and 121K+ educators",
+    "Leading organizational AI development strategy, architecting Model Context Protocol (MCP) infrastructure and enabling AI-assisted development workflows",
+    "Designed and implemented a testing automation framework, improving code reliability and reducing manual QA across multiple educational platforms",
+    "Collaborated with product, design, compliance, and leadership teams to meet state government standards and accessibility requirements",
+  ];
+
   const workRikerWeb = [
-    'Specialize in full-stack web development using HTML/CSS, JavaScript, and Tailwind CSS',
-    'Follow design mockups and wireframes for precise implementation',
-    'Collaborate closely with backend developers for seamless integration',
-    'Leverage Tailwind CSS utilities to create custom layouts and styles',
-    'Delivered projects for various industries, increasing online leads by 25% for an HVAC company',
-    'Boosted user engagement by 30% and reduced load times by 15% for a food delivery service',
-    'Contributed to a 20% increase in overall project delivery efficiency',
+    "Built responsive, accessible UIs using Vue.js and React, translating Figma designs into production-ready components",
+    "Worked with TailwindCSS and component-driven architecture, creating reusable component libraries that reduced development time and improved consistency",
+    "Collaborated with designers on design-to-code workflows for pixel-perfect, accessible implementation across projects",
   ];
 
   const workCodingForHermitCrabs = [
-    'Developed and maintained websites for small businesses using HTML, CSS, and JavaScript',
-    'Optimized websites for mobile responsiveness and cross-browser compatibility',
-    'Implemented SEO best practices to improve search engine rankings',
-    'Collaborated with clients to understand their needs and deliver custom solutions',
-    'Helped write articles introducing underpriveledged teens to careers in tech',
-    'Provided ongoing support and maintenance to ensure optimal performance',
+    "Completed an intensive bootcamp-style apprenticeship, gaining proficiency in Django, Python backend development, and full-stack architecture",
+    "Contributed to production Django applications and open-source educational technology initiatives in an agile team",
   ];
+
   return (
     <div className="my-64">
       <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
@@ -75,21 +83,26 @@ const Experience = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2 ">
           <Details
-            position="Frontend Developer"
+            position="Full-Stack Developer"
+            company="Georgia Department of Education"
+            companyLink="https://www.gadoe.org/"
+            time="March 2025 - Present"
+            work={workGaDoe}
+          />
+          <Details
+            position="Junior Front-End Developer"
             company="RikerWeb"
-            companyLink= '/'
-            time="2024-Present"
+            time="January 2022 - December 2023"
             address="Colorado Springs, CO"
             work={workRikerWeb}
           />
           <Details
-            position="Web Developer"
+            position="Junior Software Development Apprentice"
             company="Coding For Hermit Crabs"
-            companyLink="/"
-            time="2023"
+            time="April 2023 - July 2023"
             address="Atlanta, GA"
             work={workCodingForHermitCrabs}
-            />
+          />
         </ul>
       </div>
     </div>
