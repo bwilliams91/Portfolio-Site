@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Head>
         <title>Welcome to my Portfolio</title>
-        <meta name="description" content="Brian Williams Portfolio" />
+        <meta name="description" content="Brian Williams is a full-stack developer building accessible education and government technology." />
       </Head>
       <TransitionEffect />
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
@@ -24,15 +24,17 @@ export default function Home() {
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Taking what is possible tomorrow and creating it today."
+                text="Building accessible software for millions of students."
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl sm:pt-2"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
-                I love making something beautiful and functional with the newest
-                development techniques. I look for challenges in the unknown and
-                the new. Right now, I am practicing with React. While you are
-                here, feel free to check out some of my other recent work or
-                read one of my articles.
+                I am a full-stack developer building education technology for
+                the Georgia Department of Education, where my work supports
+                1.75M+ K-12 students and 121K+ educators. I care about clear,
+                accessible interfaces backed by solid architecture, and I am
+                currently leading AI-assisted development efforts across my
+                organization. While you are here, feel free to check out some
+                of my recent projects or download my resume.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
