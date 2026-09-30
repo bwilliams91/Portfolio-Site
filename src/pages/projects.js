@@ -13,9 +13,9 @@ import SunsetRacer from "../../public/images/projects/sunset-racer.webp";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 
-const FramerImage = motion(Image);
+const FramerImage = motion.create(Image);
 
-const FeaturedProject = ({ type, title, summary, img, link, github }) => {
+const FeaturedProject = ({ type, title, summary, img, link, github, preload = false }) => {
   return (
     <article className="w-full flex items-center justify-between relative rounded-3xl rounded-br-2xl border border-solid border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light
     lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
@@ -28,6 +28,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         <FramerImage
           src={img}
           alt={title}
+          preload={preload}
           className="w-full h-auto rounded-xl"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
@@ -124,6 +125,7 @@ const projects = () => {
               <FeaturedProject
                 title="ThreeJS Quote Cloud"
                 img={QuoteCloud}
+                preload
                 summary="A quote made of 3D Text floating in a cloud of randomly generated geometry."
                 link="https://quote-cloud.vercel.app/"
                 type="Featured Project"
