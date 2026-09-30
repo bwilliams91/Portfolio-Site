@@ -3,7 +3,8 @@ import Head from "next/head";
 import TransitionEffect from "@/components/TransitionEffect";
 import Layout from "@/components/layout";
 import AnimatedText from "@/components/AnimatedText";
-import { Project } from "@/components/ProjectCards";
+import { FeaturedProject, Project } from "@/components/ProjectCards";
+import AsciiWorld from "../../public/images/fun/ascii-world.webp";
 import GalaxyGenerator from "../../public/images/fun/galaxy-generator.webp";
 import HauntedHouse from "../../public/images/fun/haunted-house.webp";
 import Fox from "../../public/images/fun/fox.webp";
@@ -102,7 +103,7 @@ const fun = () => {
         <title>Brian Williams | Fun Things</title>
         <meta
           name="description"
-          content="Little worlds and experiments: Three.js scenes, shaders and small browser games built for the joy of it."
+          content="Little worlds and experiments: a 3D world rendered entirely as text, Three.js scenes, shaders and small browser games built for the joy of it."
         />
       </Head>
       <TransitionEffect />
@@ -115,6 +116,17 @@ const fun = () => {
           </p>
 
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+            <div className="col-span-12">
+              <FeaturedProject
+                title="ASCII World"
+                img={AsciiWorld}
+                summary="A first-person world rendered entirely as text. A procedurally generated voxel landscape of rivers, forests, a stone fort and villagers is drawn at character-grid resolution, then covered in a density-sorted glyph pass. Click to enter, then explore with WASD and the mouse. Best on desktop."
+                link="https://acii-project.vercel.app"
+                type="Featured Experiment"
+                tags={["Three.js", "Procedural Generation", "ASCII Art"]}
+                preload
+              />
+            </div>
             {experiments.map((experiment, index) => {
               // With an odd count, center the last card rather than leaving a gap beside it.
               const centered = experiments.length % 2 === 1 && index === experiments.length - 1;
