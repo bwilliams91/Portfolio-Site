@@ -38,13 +38,11 @@ const AnimatedText = ({ text, className = "" }) => {
         animate="animate"
       >
         {text.split(" ").map((word, index) => (
-          <motion.span
-            key={word + "-" + index}
-            className="inline-block"
-            variants={singleWord}
-          >
-            {word}&nbsp;
-          </motion.span>
+          <React.Fragment key={word + "-" + index}>
+            <motion.span className="inline-block" variants={singleWord}>
+              {word}
+            </motion.span>{" "}
+          </React.Fragment>
         ))}
       </motion.h1>
     </div>

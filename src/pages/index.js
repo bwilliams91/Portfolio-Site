@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Layout from "../components/layout";
 import Image from "next/image";
 import profilePic from "../../public/images/profile/profile-pic-upscaled-removebg.webp";
@@ -7,36 +6,45 @@ import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 import HireMe from "@/components/HireMe";
 import TransitionEffect from "@/components/TransitionEffect";
+import Seo from "@/components/Seo";
+import { personJsonLd, websiteJsonLd } from "@/lib/site";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Welcome to my Portfolio</title>
-        <meta name="description" content="Brian Williams Portfolio" />
-      </Head>
+      <Seo
+        title="Brian Williams | Full-Stack Developer Portfolio"
+        description="Brian Williams is a full-stack developer building interactive web experiences and education technology. Explore projects in Vue, React, Next.js and Three.js."
+        path="/"
+        jsonLd={[personJsonLd, websiteJsonLd]}
+      />
       <TransitionEffect />
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
-        <layout className="pt-0 md:p-16 sm:pt-8">
+        <Layout className="pt-0 md:p-16 sm:pt-8">
           <div className="flex items-center justify-between w-full lg:flex-col">
             <div className="w-1/2 md:w-full">
-              <Image src={profilePic} alt="Brian" className="w-full h-auto lg:hidden md:inline-block md:w-full " priority sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw" />
+              <Image src={profilePic} alt="Illustrated portrait of Brian Williams" className="w-full h-auto lg:hidden md:inline-block md:w-full " preload fetchPriority="high" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw" />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
+              <p className="self-start text-lg font-semibold uppercase tracking-widest text-primary dark:text-primaryDark lg:self-center md:text-base sm:text-sm">
+                Brian Williams · Full-Stack Developer
+              </p>
               <AnimatedText
-                text="Taking what is possible tomorrow and creating it today."
+                text="Sculpting interactive experiences that push the web beyond its limits."
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl sm:pt-2"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
-                I love making something beautiful and functional with the newest
-                development techniques. I look for challenges in the unknown and
-                the new. Right now, I am practicing with React. While you are
-                here, feel free to check out some of my other recent work or
-                read one of my articles.
+                I am a full-stack developer who loves building immersive,
+                interactive web experiences with Three.js, D3.js, and Framer
+                Motion. By day I build education technology for the Georgia
+                Department of Education, supporting 1.75M+ K-12 students and
+                121K+ educators, and I am leading AI-assisted development
+                efforts across my organization. While you are here, feel free
+                to explore my recent projects or download my resume.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
-                  href="/brian-w-resume-2024.pdf"
+                  href="/brian-w-resume-2026.pdf"
                   target="_blank"
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 
                   border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
@@ -55,7 +63,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </layout>
+        </Layout>
 
         <HireMe />
       </main>
