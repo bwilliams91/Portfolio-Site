@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <TransitionEffect />
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
-        <layout className="pt-0 md:p-16 sm:pt-8">
+        <Layout className="pt-0 md:p-16 sm:pt-8">
           <div className="flex items-center justify-between w-full lg:flex-col">
             <div className="w-1/2 md:w-full">
               <Image src={profilePic} alt="Brian" className="w-full h-auto lg:hidden md:inline-block md:w-full " priority sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw" />
@@ -55,7 +55,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </layout>
+        </Layout>
 
         <HireMe />
       </main>

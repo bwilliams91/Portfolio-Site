@@ -112,7 +112,7 @@ const projects = () => {
     <>
       <Head>
         <title>Brian Williams | Projects Page</title>
-        <meta name="description" content="any description" />
+        <meta name="description" content="Selected projects by Brian Williams: ThreeJS experiments, games and front-end builds." />
       </Head>
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">

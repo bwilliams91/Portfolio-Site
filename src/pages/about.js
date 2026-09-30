@@ -40,7 +40,7 @@ const about = () => {
     <>
       <Head>
         <title>Brian Williams | About Page</title>
-        <meta name="description" content="any description" />
+        <meta name="description" content="About Brian Williams, a web developer and UI/UX designer building beautiful, functional, user-centered digital experiences." />
       </Head>
       <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">

@@ -33,7 +33,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   }
 
   return (
-    <button href={href} className={`${className} relative group text-light dark:text-dark my-2`} onClick={handleClick}>
+    <button className={`${className} relative group text-light dark:text-dark my-2`} onClick={handleClick}>
       {title}
 
       <span
@@ -59,7 +59,7 @@ const NavBar = () => {
 
 
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8">
+    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 xl:px-16 lg:px-16 md:px-12 sm:px-8">
 
       <button className="flex-col justify-center items-center hidden lg:flex" onClick={handleClick}>
         <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}></span>
@@ -70,12 +70,12 @@ const NavBar = () => {
 {/* NAV BAR COMPUTER */}
 
       <div className="w-full flex justify-between items-center lg:hidden">
-      <nav>
-        <CustomLink href="/" title="Home" className="mr-4" />
-        <CustomLink href="/about" title="About" className="mx-4" />
-        <CustomLink href="/projects" title="Projects" className="mx-4" />
-        <CustomLink href="/articles" title="Articles" className="ml-4" />
-        <CustomLink href="/fun" title="Fun Things" className="ml-4" />
+      <nav className="flex items-center gap-8 xl:gap-4">
+        <CustomLink href="/" title="Home" />
+        <CustomLink href="/about" title="About" />
+        <CustomLink href="/projects" title="Projects" />
+        <CustomLink href="/articles" title="Articles" />
+        <CustomLink href="/fun" title="Fun Things" />
       </nav>
       
       <nav className="flex items-center justify-center flex-wrap gap-6">
@@ -127,6 +127,7 @@ const NavBar = () => {
             <CustomMobileLink href="/about" title="About" className="" toggle={handleClick} />
             <CustomMobileLink href="/projects" title="Projects" className="" toggle={handleClick} />
             <CustomMobileLink href="/articles" title="Articles" className="" toggle={handleClick} />
+            <CustomMobileLink href="/fun" title="Fun Things" className="" toggle={handleClick} />
           </nav>
           
           <nav className="flex items-center justify-center flex-wrap mt-2">

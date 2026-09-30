@@ -40,7 +40,7 @@ const MovingImg = ({ title, img, link }) => {
       </h2>
       <FramerImage
         style={{ x: x, y: y }}
-        intial={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
         ref={imgRef}
         src={img}
@@ -54,7 +54,7 @@ const MovingImg = ({ title, img, link }) => {
 const Article = ({ img, title, time, link }) => {
   return (
     <motion.li
-    intial={{y:200}}
+    initial={{y:200}}
     whileInView={{y:0, transition:{duration:0.5, ease:"easeInOut"} }}
     viewport={{once: true}}
     className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4
@@ -87,7 +87,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
           {title}
         </h2>
       </Link>
-      <p className="text-sm mb-2 sm:text-hidden">{summary}</p>
+      <p className="text-sm mb-2">{summary}</p>
       <span className="text-primary font-semibold">{time}</span>
     </li>
   );
@@ -98,7 +98,7 @@ const articles = () => {
     <>
       <Head>
         <title>Brian Williams | Articles Page</title>
-        <meta name="description" content="any description" />
+        <meta name="description" content="Articles by Brian Williams on React and modern front-end development." />
       </Head>
       <TransitionEffect />
       <main className="w-full pb-16 mb-16 flex flex-col items-center justify-center overflow-hidden">
